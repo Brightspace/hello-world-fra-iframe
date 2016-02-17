@@ -16,11 +16,11 @@ function getHost(baseUrl) {
 }
 
 function whoami(client, request) {
-	return new Promise((resolve, reject) => {
-		client.request('valenceHost').then((valenceHost) => {
+	return new Promise(function(resolve, reject) {
+		client.request('valenceHost').then(function(valenceHost) {
 			request.get(valenceHost + '/d2l/api/lp/1.0/users/whoami')
 				.use(auth({ trustedHost: getHost(valenceHost) }))
-				.end((err,res) => {
+				.end(function(err,res) {
 					resolve(err ? err : JSON.parse(res.text));
 				});
 		});
@@ -30,17 +30,17 @@ function whoami(client, request) {
 Promise.all([
 	System.import('ifrau/client'),
 	System.import('superagent')
-]).then((modules) => {
+]).then(function(modules) {
 	const Client = modules[0],
 		request = modules[1];
 	new Client({ syncFont: true, syncLang: true})
 		.connect()
-		.then((client) => {
+		.then(function(client) {
 			Promise.all([
 				client.request('orgUnit'),
 				client.request('font'),
 				whoami(client, request)
-			]).then((ifrauData) => {
+			]).then(function(ifrauData) {
 
 				var data = {
 					orgUnit: ifrauData[0],
