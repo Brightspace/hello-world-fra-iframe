@@ -1,5 +1,6 @@
 @import "node_modules/vui-typography/base-font-size.scss";
 @import "node_modules/vui-typography/typography.scss";
+@import 'node_modules/vui-typography/headings.scss';
 
 html {
 	font-size: $vui-base-fontSize;
@@ -7,7 +8,11 @@ html {
 
 body {
 	@include vui-typography();
-	margin: 0;
+	margin: 1.5rem 0 0 0;
+}
+
+h1 {
+	@include vui-typography-heading1;
 }
 
 #content {
