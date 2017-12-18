@@ -5,7 +5,7 @@ const auth = require('superagent-d2l-session-auth'),
 
 System.config({
 	map: {
-		'ifrau/client': 'https://s.brightspace.com/lib/ifrau/0.13.1/ifrau/client.js',
+		'ifrau/client': 'https://s.brightspace.com/lib/ifrau/0.21.1/ifrau/client.js',
 		superagent: 'https://s.brightspace.com/lib/superagent/1.2.0/superagent.min.js'
 	}
 });
