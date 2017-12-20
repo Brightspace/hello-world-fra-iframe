@@ -1,7 +1,5 @@
 language: node_js
-node_js:
-- 4
-sudo: false
+node_js: node
 after_success:
 - '[ "$TRAVIS_SECURE_ENV_VARS" = "true" ] && export NODE_ENV=production && npm run
   publish-release'
