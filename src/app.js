@@ -5,7 +5,7 @@ const auth = require('superagent-d2l-session-auth'),
 
 System.config({
 	map: {
-		'ifrau/client': 'https://s.brightspace.com/lib/ifrau/0.13.1/ifrau/client.js',
+		'ifrau/client': 'https://s.brightspace.com/lib/ifrau/0.22.0/ifrau/client.js',
 		superagent: 'https://s.brightspace.com/lib/superagent/1.2.0/superagent.min.js'
 	}
 });
@@ -39,6 +39,8 @@ Promise.all([
 			Promise.all([
 				client.request('orgUnit'),
 				client.request('font'),
+				client.request('intl'),
+				client.request('timezone'),
 				whoami(client, request)
 			]).then((ifrauData) => {
 
@@ -47,7 +49,9 @@ Promise.all([
 					langTag: localeProvider.getLangTag(),
 					isRtl: localeProvider.isRtl(),
 					font: ifrauData[1],
-					whoAmI: ifrauData[2]
+					intl: ifrauData[2],
+					timezone: ifrauData[3],
+					whoAmI: ifrauData[4]
 				};
 				var code = document.getElementById('ifrauData');
 				code.appendChild(document.createTextNode(
