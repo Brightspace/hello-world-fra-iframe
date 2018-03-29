@@ -33,7 +33,7 @@ Promise.all([
 ]).then((modules) => {
 	const Client = modules[0],
 		request = modules[1];
-	new Client({ syncFont: true, syncLang: true})
+	new Client({ syncFont: true, syncLang: true, syncCssVariable: true})
 		.connect()
 		.then((client) => {
 			Promise.all([
