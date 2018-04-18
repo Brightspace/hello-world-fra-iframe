@@ -1,6 +1,6 @@
 {
   "name": "hello-world-fra-iframe",
-  "version": "0.5.1",
+  "version": "0.7.0",
   "description": "Sample IFRAME-based free-range application",
   "appId": "urn:d2l:fra:id:hello-world-fra-iframe",
   "main": "src/index.html",
