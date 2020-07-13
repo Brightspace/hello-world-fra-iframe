@@ -1,5 +1,7 @@
 language: node_js
 node_js: node
+script:
+- npm run build
 after_success:
 - '[ "$TRAVIS_SECURE_ENV_VARS" = "true" ] && export NODE_ENV=production && npm run
   publish-release'

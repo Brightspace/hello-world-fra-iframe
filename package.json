@@ -1,19 +1,14 @@
 {
   "name": "hello-world-fra-iframe",
-  "version": "0.7.0",
+  "version": "1.0.0",
   "description": "Sample IFRAME-based free-range application",
   "appId": "urn:d2l:fra:id:hello-world-fra-iframe",
   "main": "src/index.html",
   "private": true,
   "scripts": {
-    "prebuild": "rimraf dist && mkdir dist",
-    "build:css": "node-sass --output-style expanded --importer ./node_modules/frau-sass-importer/ ./src/app.scss ./dist/app.css",
-    "build:js": "browserify -t [ babelify ] ./src/app.js > ./dist/app.js",
-    "build:appconfig": "frau-appconfig-builder",
-    "build:app": "cpy ./src/index.html ./dist && npm run build:js",
-    "build": "npm run build:appconfig && npm run build:app && npm run build:css",
-    "publish-release": "npm run build -s && frau-publisher | peanut-gallery",
-    "resolver": "frau-local-appresolver"
+    "build": "rimraf dist && frau-appconfig-builder && rollup -c rollup.config.js",
+    "start": "npm run build && frau-local-appresolver",
+    "publish-release": "frau-publisher"
   },
   "config": {
     "frauAppConfigBuilder": {
@@ -53,19 +48,18 @@
   },
   "homepage": "https://github.com/Brightspace/hello-world-fra-iframe#readme",
   "devDependencies": {
-    "babel-runtime": "^6.3.19",
-    "babelify": "^7.2.0",
-    "browserify": "^13.0.0",
-    "cpy-cli": "^1.0.0",
-    "frau-appconfig-builder": "^0.1.0",
-    "frau-local-appresolver": "^0.3.0",
-    "frau-locale-provider": "^0.4.0",
-    "frau-publisher": "^2.5.2",
-    "frau-sass-importer": "^0.3.0",
-    "node-sass": "^3.4.2",
-    "peanut-gallery": "^1.1.1",
-    "rimraf": "^2.5.1",
-    "superagent-d2l-session-auth": "^1.0.2",
-    "vui-typography": "^2.0.1"
+    "@brightspace-ui/core": "^1",
+    "@open-wc/building-rollup": "^1",
+    "d2l-fetch": "github:Brightspace/d2l-fetch#semver:^2",
+    "d2l-fetch-auth": "^1",
+    "es-dev-server": "^1",
+    "frau-appconfig-builder": "^1",
+    "frau-local-appresolver": "^1",
+    "frau-locale-provider": "^1",
+    "frau-publisher": "^2",
+    "lit-element": "^2",
+    "lit-html": "^1",
+    "rimraf": "^2",
+    "rollup": "^2"
   }
 }
