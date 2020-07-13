@@ -1,7 +1,6 @@
 # hello-world-fra-iframe
 
 [![Build status][ci-image]][ci-url]
-[![Dependency Status][dependencies-image]][dependencies-url]
 
 This is a simple "hello world" IFRAME-based free-range application.
 
@@ -35,7 +34,5 @@ If you have the `testing-scaffolds` component checked out, you can visit `{insta
 
 The application will automatically publish a "dev" version to the Brightspace CDN after each commit. To publish a numbered "release" version, set the version in the `package.json` file and tag the commit with the same version number.
 
-[ci-url]: https://travis-ci.org/Brightspace/hello-world-fra-iframe
+[ci-url]: https://travis-ci.com/Brightspace/hello-world-fra-iframe
 [ci-image]: https://img.shields.io/travis/Brightspace/hello-world-fra-iframe.svg
-[dependencies-url]: https://david-dm.org/Brightspace/hello-world-fra-iframe
-[dependencies-image]: https://img.shields.io/david/Brightspace/hello-world-fra-iframe.svg
