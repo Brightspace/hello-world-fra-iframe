@@ -24,10 +24,6 @@
       "files": "./dist/**",
       "moduleType": "app",
       "targetDirectory": "hello-world-fra-iframe",
-      "creds": {
-        "key": "AKIAIM47CVYWTO5GGHVA",
-        "secretVar": "S3_SECRET"
-      },
       "devTagVar": "TRAVIS_COMMIT",
       "versionVar": "TRAVIS_TAG"
     }
