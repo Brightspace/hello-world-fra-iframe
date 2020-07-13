@@ -26,7 +26,7 @@ After building the application, you can run a local copy of it using the local-a
 Then, start the appresolver:
 
 ```shell
-npm run resolver
+npm start
 ```
 
 If you have the `testing-scaffolds` component checked out, you can visit `{instance}/d2l/tests/apps/hello-world-fra-iframe/` to see the app.

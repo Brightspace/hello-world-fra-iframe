@@ -1,36 +1,22 @@
-<!DOCTYPE html>
-<html>
+<!doctype html>
+<html lang="en">
 	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
+		<style>
+			html {
+				font-size: 20px;
+			}
+			body {
+				margin: 0;
+				padding: 0;
+			}
+		</style>
 		<title>hello world</title>
-		<link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/8.7/styles/monokai_sublime.min.css">
-		<link rel="stylesheet" href="app.css">
 	</head>
-	<body>
-		<div id="content">
-			<h1>Hello World</h1>
-			<p>
-				This is a simple free-range application demonstrating an
-				IFRAME-based app.
-			</p>
-			<h2>Runtime data provided via ifrau:</h2>
-			<pre><code id="ifrauData" class="json"></code></pre>
-			<h2>Page Title Sync</h2>
-			<p>
-				The IFRAME's page title and the title of the outer page
-				can be kept in sync by ifrau.
-			</p>
-			<label>
-				page title
-				<input type="text" onchange="document.title=value;" value="hello world" />
-			</label>
-			<h2>Branding Sync</h2>
-			<p>Organization configurable branding-related CSS variables are synchronized.
-			<div class="branding-primary">
-				Primary
-			</div>
-		</div>
-		<script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/8.7/highlight.min.js"></script>
-		<script src="//s.brightspace.com/lib/systemjs/0.18.1/system.js"></script>
-		<script src="app.js"></script>
+	<body class="d2l-typography">
+		<hello-world-app></hello-world-app>
+		<script src="//s.brightspace.com/lib/ifrau/0.32.0/ifrau/client.js"></script>
+		<script type="module" src="./hello-world-app.js"></script>
 	</body>
 </html>
