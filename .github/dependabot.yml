@@ -4,7 +4,3 @@ updates:
   directory: "/"
   schedule:
     interval: daily
-    time: "09:00"
-    timezone: America/New_York
-  open-pull-requests-limit: 99
-  rebase-strategy: disabled
