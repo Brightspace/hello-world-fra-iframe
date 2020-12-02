@@ -48,7 +48,7 @@
     "@open-wc/building-rollup": "^1",
     "d2l-fetch": "github:Brightspace/d2l-fetch#semver:^2",
     "d2l-fetch-auth": "^1",
-    "es-dev-server": "^1",
+    "es-dev-server": "^2",
     "frau-appconfig-builder": "^1",
     "frau-local-appresolver": "^1",
     "frau-locale-provider": "^1",
