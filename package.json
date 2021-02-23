@@ -45,6 +45,7 @@
   "homepage": "https://github.com/Brightspace/hello-world-fra-iframe#readme",
   "devDependencies": {
     "@brightspace-ui/core": "^1",
+    "@brightspace-ui/htmleditor": "^1",
     "@open-wc/building-rollup": "^1",
     "d2l-fetch": "github:Brightspace/d2l-fetch#semver:^2",
     "d2l-fetch-auth": "^1",
@@ -56,6 +57,7 @@
     "lit-element": "^2",
     "lit-html": "^1",
     "rimraf": "^3",
-    "rollup": "^2"
+    "rollup": "^2",
+    "rollup-plugin-copy": "^3"
   }
 }
