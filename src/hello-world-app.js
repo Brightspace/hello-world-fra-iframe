@@ -1,7 +1,7 @@
 import '@brightspace-ui/core/components/button/button.js';
 import '@brightspace-ui/core/components/demo/code-view.js';
 import '@brightspace-ui/core/components/dialog/dialog-confirm.js';
-import '@brightspace-ui/core/components/dialog/dialog-fullscreen';
+import '@brightspace-ui/core/components/dialog/dialog-fullscreen.js';
 import '@brightspace-ui/core/components/typography/typography.js';
 import '@brightspace-ui/htmleditor/htmleditor.js';
 import { LitElement, html, css } from 'lit-element';
@@ -85,8 +85,8 @@ export class HelloWorldApp extends LitElement {
 			<d2l-button @click="${this._openConfirmDialog}">Open Confirm Dialog</d2l-button>
 
 			<h2>Fullscreen Dialog</h2>
-			<d2l-dialog-fullscreen id="dialog" title-text="Fullscreen Dialog">
-				<div id="top">Top of Dialog</div>
+			<d2l-dialog-fullscreen title-text="Fullscreen Dialog">
+				<div>Top of Dialog</div>
 				<div>Line 1</div>
 				<div>Line 2</div>
 				<div>Line 3</div>
