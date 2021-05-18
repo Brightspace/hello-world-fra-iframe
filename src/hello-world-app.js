@@ -1,6 +1,7 @@
 import '@brightspace-ui/core/components/button/button.js';
 import '@brightspace-ui/core/components/demo/code-view.js';
 import '@brightspace-ui/core/components/dialog/dialog-confirm.js';
+import '@brightspace-ui/core/components/dialog/dialog-fullscreen';
 import '@brightspace-ui/core/components/typography/typography.js';
 import '@brightspace-ui/htmleditor/htmleditor.js';
 import { LitElement, html, css } from 'lit-element';
@@ -76,12 +77,25 @@ export class HelloWorldApp extends LitElement {
 			<h1>Hello World</h1>
 			<p>This is a simple free-range application demonstrating an IFRAME-based app.</p>
 
-			<h2>Dialogs</h2>
+			<h2>Confirm Dialog</h2>
 			<d2l-dialog-confirm title-text="Confirm Dialog" text="Are you sure?">
 				<d2l-button slot="footer" primary data-dialog-action="yes">Yes</d2l-button>
 				<d2l-button slot="footer" data-dialog-action>No</d2l-button>
 			</d2l-dialog-confirm>
-			<d2l-button @click="${this._openDialog}">Open Dialog</d2l-button>
+			<d2l-button @click="${this._openConfirmDialog}">Open Confirm Dialog</d2l-button>
+
+			<h2>Fullscreen Dialog</h2>
+			<d2l-dialog-fullscreen id="dialog" title-text="Fullscreen Dialog">
+				<div id="top">Top of Dialog</div>
+				<div>Line 1</div>
+				<div>Line 2</div>
+				<div>Line 3</div>
+				<div>Line 4</div>
+				<div>Bottom</div>
+				<d2l-button slot="footer" primary data-dialog-action="save">Save</d2l-button>
+				<d2l-button slot="footer" data-dialog-action>Cancel</d2l-button>
+			</d2l-dialog-fullscreen>
+			<d2l-button @click="${this._openFullscreenDialog}">Open Fullscreen Dialog</d2l-button>
 
 			<h2>Runtime data provided via ifrau:</h2>
 			${code}
@@ -116,8 +130,12 @@ export class HelloWorldApp extends LitElement {
 		}
 	}
 
-	_openDialog() {
+	_openConfirmDialog() {
 		this.shadowRoot.querySelector('d2l-dialog-confirm').opened = true;
+	}
+
+	_openFullscreenDialog() {
+		this.shadowRoot.querySelector('d2l-dialog-fullscreen').opened = true;
 	}
 
 }
