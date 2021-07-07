@@ -1,4 +1,5 @@
 import copy from 'rollup-plugin-copy';
+import dynamicImportVars from '@rollup/plugin-dynamic-import-vars';
 import merge from 'deepmerge';
 import { createSpaConfig } from '@open-wc/building-rollup';
 
@@ -22,6 +23,9 @@ export default merge(baseConfig, {
 				return {src: f, dest: 'dist/node_modules'};
 			}),
 			flatten: false
+		}),
+		dynamicImportVars({
+			include: 'node_modules/@brightspace-ui/htmleditor/**/*.js'
 		})
 	]
 });

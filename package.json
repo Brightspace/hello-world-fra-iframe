@@ -47,6 +47,7 @@
     "@brightspace-ui/core": "^1",
     "@brightspace-ui/htmleditor": "^1",
     "@open-wc/building-rollup": "^1",
+    "@rollup/plugin-dynamic-import-vars": "^1.1.1",
     "d2l-fetch": "github:Brightspace/d2l-fetch#semver:^2",
     "d2l-fetch-auth": "^1",
     "es-dev-server": "^2",
